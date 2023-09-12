@@ -7,7 +7,7 @@ export function showEnlargedPhoto() {
     image.addEventListener("click", function () {
 
       // При клике на фотографию устанавливаем фото в модальном окне
-      let zoomPhotoCardContent = document.getElementsByClassName("zoom-photo-area__main-content")[0];
+      let zoomPhotoCardContent: any = document.getElementsByClassName("zoom-photo-area__main-content")[0];
       zoomPhotoCardContent.style.backgroundImage = pathToPhoto(index + firstVisiblePhotoNumber + 1);
 
       // Затем делаем видимым модальное окно

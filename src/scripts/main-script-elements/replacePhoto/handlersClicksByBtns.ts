@@ -3,15 +3,15 @@ import { changeFirstVisiblePhotoNumber } from '../commonData/store/commonData';
 import addImagesBackground from './addImagesBackground';
 
 // common functions
-function disabledBtnPrev(isDisabled) {
+function disabledBtnPrev(isDisabled: boolean) {
   btn_prev().disabled = isDisabled;
 }
 
-function disabledBtnNext(isDisabled) {
+function disabledBtnNext(isDisabled: boolean) {
   btn_next().disabled = isDisabled;
 }
 
-export default function handlersClicksByBtns(numberPhotosPerPage, firstVisiblePhotoNumber) { 
+export default function handlersClicksByBtns(numberPhotosPerPage: number, firstVisiblePhotoNumber: number) { 
   btn_prev().addEventListener("click", () => {
     // прибавляем, чтобы менялся блок фотографий
     firstVisiblePhotoNumber = changeFirstVisiblePhotoNumber("decrease", numberPhotosPerPage);
