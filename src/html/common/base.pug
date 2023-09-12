@@ -1,0 +1,19 @@
+block vars
+  - var site_title = 'ustinnov';
+  - var site_lang = 'ru';
+  - var media_path = "http://localhost:9000/media";
+ 
+doctype html
+html(lang=site_lang)
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="google" content="notranslate")
+    title #{site_title}
+    //- link(rel="stylesheet" href="./result/main.css")
+
+    //- link(rel='stylesheet' href='../src/styles/css/main.css')
+    //- script(src='../src/scripts/main.js')
+    //- link(rel='stylesheet' href='./index.css')
+  body 
+    block content
