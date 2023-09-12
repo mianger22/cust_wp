@@ -1,13 +1,15 @@
 import { pathToPhoto } from "./commonFunctions/commonFunctions";
 import { allPhoto, modalPhotoBlock, video } from "./gettedElems";
-import { numberPhotosPerPage } from "./store/commonData";
+import { numberPhotosPerPage, firstVisiblePhotoNumber } from "./store/commonData";
 
 export function showEnlargedPhoto() {
   Array.from(allPhoto()).forEach((image, index) => {
     image.addEventListener("click", function () {
       // При клике на фотографию устанавливаем фото в модальном окне
       let zoomPhotoCardContent = document.getElementsByClassName("zoom-photo-area__main-content")[0];
-      zoomPhotoCardContent.style.backgroundImage = pathToPhoto(index + numberPhotosPerPage + 1);
+      zoomPhotoCardContent.style.backgroundImage = pathToPhoto(index + firstVisiblePhotoNumber + 1);
+      // alert("index = " + index);
+      // alert("numberPhotosPerPage = " + numberPhotosPerPage);
       // Затем делаем видимым модальное окно
       modalPhotoBlock().style.display = "flex";
       // Скрываем видео, чтобы при показе модального окна с фотографией оно не было видно пользователю

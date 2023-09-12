@@ -1,4 +1,5 @@
 import { btn_prev, btn_next } from '../gettedElems';
+import { changeFirstVisiblePhotoNumber } from '../store/commonData';
 import addImagesBackground from './addImagesBackground';
 
 // common functions
@@ -13,8 +14,8 @@ function disabledBtnNext(isDisabled) {
 export default function handlersClicksByBtns(numberPhotosPerPage, firstVisiblePhotoNumber) { 
   btn_prev().addEventListener("click", () => {
     // прибавляем, чтобы менялся блок фотографий
-    firstVisiblePhotoNumber = firstVisiblePhotoNumber - numberPhotosPerPage;
-  
+    firstVisiblePhotoNumber = changeFirstVisiblePhotoNumber("decrease", numberPhotosPerPage);
+
     // обновляем блок
     addImagesBackground(firstVisiblePhotoNumber);
   
@@ -32,7 +33,8 @@ export default function handlersClicksByBtns(numberPhotosPerPage, firstVisiblePh
   
   btn_next().addEventListener("click", () => {
     // прибавляем, чтобы менялся блок фотографий
-    firstVisiblePhotoNumber = firstVisiblePhotoNumber + numberPhotosPerPage;
+    firstVisiblePhotoNumber = changeFirstVisiblePhotoNumber("increase", numberPhotosPerPage);
+
     // обновляем блок
     addImagesBackground(firstVisiblePhotoNumber);
   
