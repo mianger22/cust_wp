@@ -17,3 +17,7 @@ export function modalPhotoBlock(): any {
 export function video(): HTMLVideoElement {
   return document.getElementsByTagName("video")[0];
 }
+
+export function getPhotoCardsList(): HTMLCollection {
+  return document.getElementsByClassName("photo-gallery__card");
+}

@@ -1,4 +1,4 @@
-import { btn_prev, btn_next } from '../commonData/commonElements/gettedElems';
+import { btn_prev, btn_next, getPhotoCardsList } from '../commonData/commonElements/gettedElems';
 import { changeFirstVisiblePhotoNumber } from '../commonData/store/commonData';
 import addImagesBackground from './addImagesBackground';
 
@@ -44,7 +44,7 @@ export default function handlersClicksByBtns(numberPhotosPerPage: number, firstV
       disabledBtnPrev(false);
   
       // если мы промотали блоки фотографий до последнего, то отключаем кнопку Вперёд
-      if (firstVisiblePhotoNumber === 36) {
+      if (firstVisiblePhotoNumber + numberPhotosPerPage > getPhotoCardsList().length) {
         disabledBtnNext(true);
       }
     })();
