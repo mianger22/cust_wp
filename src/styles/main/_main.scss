@@ -1,0 +1,19 @@
+@import "logo";
+@import "photo-gallery";
+@import "modal-photo";
+@import "video-gallery";
+@import "audio-gallery";
+@import "about";
+
+main {
+  padding: 10px;
+
+  // .card {
+  //   &__content {
+  //     font-size: $body-text-size;
+  //     &-description {
+  //       @include header-style(20);
+  //     }
+  //   }
+  // }     
+}

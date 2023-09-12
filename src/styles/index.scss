@@ -1,0 +1,8 @@
+// connect the common styles
+@import "./common/reset";
+@import "./common/vars";
+@import "./common/mixins";
+
+// connect the styles site
+@import "./main/main";
+@import "./footer/footer";

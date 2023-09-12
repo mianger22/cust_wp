@@ -1,0 +1,65 @@
+.photo-gallery {
+  display: flex;
+  border-bottom: 1px solid;
+  align-items: center;
+  justify-content: space-between;
+  height: 720px;
+  overflow: hidden;
+
+  &__btn-prev, &__btn-next {
+    width: 10%;
+    padding: 0 3%;
+
+    button {
+      cursor: pointer;
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__btn-prev {
+    
+  }
+
+  &__main {
+    height: 100%;
+    display: flex;
+    // border: 1px solid;
+    justify-content: center;
+    // align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+
+    .photo-gallery__card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      // border: 1px solid;
+
+      cursor: pointer;
+
+      /* Отступ слева */
+      // margin: 0 0 0 3.5%; 
+      // padding: 0.7%; 
+      /* Поля default = 2 */
+
+      // background: #f0f0f0; 
+      // border-radius: 5px; 
+
+      margin-top: 60px;
+
+      &-content {
+        @include background-card(300px, 100%);
+      }
+    }
+  }
+
+  &__btn-next {
+    
+  }
+}

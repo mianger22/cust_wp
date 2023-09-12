@@ -7,7 +7,7 @@ module.exports = {
     entry: path.join(__dirname, 'src/scripts', 'main.js'),
     output: {
       path: path.join(__dirname, 'dist'),
-      filename: 'index.[contenthash].js',
+      filename: 'main.[contenthash].js',
       assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
     },
     module: {
@@ -26,16 +26,16 @@ module.exports = {
           use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
         },
         {
-                   test: /\.(png|jpg|jpeg|gif)$/i,
-                   type: 'asset/resource',
-                 },
-                 {
-                   test: /\.svg$/,
-                   type: 'asset/resource',
-                 generator: {
-                     filename: path.join('icons', '[name].[contenthash][ext]'),
-                   },
-                 },
+          test: /\.(png|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
+        },
+        {
+          test: /\.svg$/,
+          type: 'asset/resource',
+          generator: {
+            filename: path.join('icons', '[name].[contenthash][ext]'),
+          },
+        },
       ],
     },
     plugins: [

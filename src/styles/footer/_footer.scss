@@ -1,0 +1,21 @@
+footer {
+  // border: 1px solid;
+  font-size: $body-text-size * 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3%;
+
+  .linkOnOtherResource {
+    img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      
+      &:hover {
+        transition: 0.5s;
+        transform: scale(2);
+      }
+    }
+  }
+}
