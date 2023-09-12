@@ -4,7 +4,7 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: path.join(__dirname, 'src/scripts', 'main.js'),
+    entry: path.join(__dirname, 'src/scripts', 'main.ts'),
     output: {
       path: path.join(__dirname, 'dist'),
       filename: 'main.[contenthash].js',
@@ -12,6 +12,11 @@ module.exports = {
     },
     module: {
       rules: [
+        {
+          test: /\.ts?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
+        },
         {
           test: /\.js$/,
           use: 'babel-loader',
@@ -37,6 +42,9 @@ module.exports = {
           },
         },
       ],
+    },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
       new HtmlWebpackPlugin({
