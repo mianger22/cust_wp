@@ -1,4 +1,4 @@
-import { firstVisiblePhotoNumber, numberPhotosPerPage } from '../store/commonData';
+import { firstVisiblePhotoNumber, numberPhotosPerPage } from '../commonData/store/commonData';
 import addImagesBackground from './addImagesBackground';
 import handlersClicksByBtns from './handlersClicksByBtns';
 

@@ -1,5 +1,5 @@
-import { btn_prev, btn_next } from '../gettedElems';
-import { changeFirstVisiblePhotoNumber } from '../store/commonData';
+import { btn_prev, btn_next } from '../commonData/commonElements/gettedElems';
+import { changeFirstVisiblePhotoNumber } from '../commonData/store/commonData';
 import addImagesBackground from './addImagesBackground';
 
 // common functions

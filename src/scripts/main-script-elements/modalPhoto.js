@@ -1,6 +1,6 @@
-import { pathToPhoto } from "./commonFunctions/commonFunctions";
-import { allPhoto, modalPhotoBlock, video } from "./gettedElems";
-import { firstVisiblePhotoNumber } from "./store/commonData";
+import { pathToPhoto } from "./commonData/commonFunctions/commonFunctions";
+import { allPhoto, modalPhotoBlock, video } from "./commonData/commonElements/gettedElems";
+import { firstVisiblePhotoNumber } from "./commonData/store/commonData";
 
 export function showEnlargedPhoto() {
   Array.from(allPhoto()).forEach((image, index) => {

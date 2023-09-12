@@ -1,4 +1,4 @@
-import { pathToPhoto } from "../commonFunctions/commonFunctions";
+import { pathToPhoto } from "../commonData/commonFunctions/commonFunctions";
 
 export default function addImagesBackground(firstVisiblePhotoNumber) {
   const listPhoto = document.getElementsByClassName("photo-gallery__card-content");
