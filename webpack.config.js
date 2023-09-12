@@ -40,7 +40,7 @@ module.exports = {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'src', './html/template.pug'),
+        template: path.join(__dirname, 'src', './html/index.pug'),
         filename: 'index.html',
       }),
       new FileManagerPlugin({
@@ -55,6 +55,10 @@ module.exports = {
       }),
     ],
    devServer: {
+    // Здесь указывается вся статика, которая будет на нашем сервере
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
      watchFiles: path.join(__dirname, 'src'),
      port: 9000,
    },

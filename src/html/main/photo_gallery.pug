@@ -1,0 +1,12 @@
+include ../common/mixins 
+
+.photo-gallery
+  .photo-gallery__btn-prev
+    button(disabled)
+      img(src=`${media_path}/icons/btn-prev.png` alt="prev")
+  .photo-gallery__main
+    +photo_card_collection()
+  .photo-gallery__btn-next
+    button
+      img(src=`${media_path}/icons/btn-next.png` alt="next")
+            

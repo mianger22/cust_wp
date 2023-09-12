@@ -1,0 +1,19 @@
+- var altsList = ['in studio', 'on lake', 'in studio', 'on lake', 'in studio', 'on lake', 'in studio', 'on lake', 'in studio'];
+- var otherResourses = ['vk', 'youtube', 'gmail', 'telegram', 'instagram', 'tiktok', 'twitter'];
+- var videoNameList = ['test'];
+ 
+mixin photo_card_collection()
+  each alt in altsList
+    .photo-gallery__card
+      .photo-gallery__card-content(data-image-alt=`${alt}`)
+
+mixin links_collection()
+  each link in otherResourses
+    .linkOnOtherResource
+      img(src=`${media_path}/icons/${link}.png` alt=`${link}`)
+      
+mixin video_collection()
+  each videoName in videoNameList
+    .video-gallery__card
+      video(controls)
+        source(src=`${media_path}/video/${videoName}.mp4` type="video/mp4")
